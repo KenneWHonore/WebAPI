@@ -1,0 +1,73 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Conteneur des formulaires */
+  .form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Styles des inputs */
+  .form input, .form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Effet focus sur les inputs */
+  .form input:focus, .form select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Bouton stylisé */
+  .btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Effet hover sur le bouton */
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Effet click sur le bouton */
+  .btn:active {
+    background-color: #004085;
+  }
+  
+  /* Style du message de bienvenue */
+  .welcome {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
