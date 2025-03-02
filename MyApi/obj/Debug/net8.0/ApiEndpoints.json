@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "login",
-        "Type": "MyApi.Models.User",
+        "Name": "loginRequest",
+        "Type": "MyApi.Controllers.LoginRequest",
         "IsRequired": true
       }
     ],

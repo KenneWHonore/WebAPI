@@ -42,10 +42,10 @@ namespace MyApi.Controllers
 
         // Route pour se connecter et obtenir un JWT
         [HttpPost("login")]
-        public IActionResult Login([FromBody] User login)
+        public IActionResult Login([FromBody] LoginRequest loginRequest)
         {
             // Recherche de l'utilisateur par username et password
-            var user = _context.Users.FirstOrDefault(u => u.Username == login.Username && u.Password == login.Password);
+            var user = _context.Users.FirstOrDefault(u => u.Username == loginRequest.Username && u.Password == loginRequest.Password);
             if (user == null)
             {
                 return Unauthorized(new { message = "Identifiants invalides" });
@@ -80,5 +80,12 @@ namespace MyApi.Controllers
             // Retourner le token JWT généré
             return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });
         }
+    }
+
+    // Classe pour représenter la demande de connexion
+    public class LoginRequest
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }
